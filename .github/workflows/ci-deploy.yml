@@ -60,6 +60,6 @@ jobs:
         uses: PrefectHQ/actions-prefect-deploy@v4
         with:
           deployment-names: hello_deployment
-          entrypoints: flows/hello_flow.py:hello_flow
+          entrypoint: flows/hello_flow.py:hello_flow
           requirements-file-paths: requirements.txt
           image: ${{ env.IMAGE_NAME }}
