@@ -41,12 +41,9 @@ jobs:
       - name: Install Prefect CLI
         run: pip install --upgrade "prefect>=2.0.0"
 
-      - name: Apply Prefect deployment
-        env:
-          PREFECT_API_KEY: ${{ secrets.PREFECT_API_KEY }}
-          PREFECT_API_URL: ${{ secrets.PREFECT_API_URL }}
-        run: |
-          prefect deployment create flows/hello_flow.py:hello_flow \
-            --name "hello_deployment" \
-            --image "${{ env.IMAGE_NAME }}" \
-            --apply
+      - name: Run Prefect Deploy
+        uses: PrefectHQ/actions-prefect-deploy@v4
+        with:
+          deployment-names: hello_deployment
+          requirements-file-paths: requirements.txt
+          image: ghcr.io/${{ secrets.REGISTRY_USERNAME }}/prefect_ci_cd_example/prefect-hello:latest
