@@ -55,6 +55,9 @@ jobs:
           prefect-api-key: ${{ secrets.PREFECT_API_KEY }}
           prefect-workspace: ${{ secrets.PREFECT_WORKSPACE }}
 
+      - name:  Checking Prefect Work Pools
+        run: prefect work-pool ls
+
       - name: Start Prefect worker
         run: prefect worker start --pool default-work-pool --type docker
 
