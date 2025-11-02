@@ -63,4 +63,7 @@ jobs:
         uses: PrefectHQ/actions-prefect-deploy@v4
         with:
           deployment-file-path: prefect.yaml
+      
+      - name: Run Prefect Flow
+        run: prefect deployment run 'hello_flow/deployment'
 
