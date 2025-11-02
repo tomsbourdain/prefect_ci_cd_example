@@ -39,4 +39,4 @@ jobs:
       - name: Run Prefect Flow on GitHub Runner
         run: |
           cd $GITHUB_WORKSPACE
-          prefect deployment run 'hello_flow/deployment'
+          python flows/hello_flow.py

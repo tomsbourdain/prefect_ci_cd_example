@@ -1,3 +1,6 @@
+project:
+  name: prefect_ci_cd_example
+
 flows:
   hello_flow:
     entrypoint: flows/hello_flow.py:hello_flow
