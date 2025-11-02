@@ -3,8 +3,7 @@ project:
 
 flows:
   hello_flow:
-    path: flows/hello_flow.py
-    entrypoint: hello_flow
+    entrypoint: flows/hello_flow.py:hello_flow
 
 deployments:
   hello_deployment:
