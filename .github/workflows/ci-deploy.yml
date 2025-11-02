@@ -46,7 +46,7 @@ jobs:
           PREFECT_API_KEY: ${{ secrets.PREFECT_API_KEY }}
           PREFECT_API_URL: ${{ secrets.PREFECT_API_URL }}
         run: |
-          prefect deployment build flows/hello_flow.py:hello_flow \
+          prefect deployment create flows/hello_flow.py:hello_flow \
             --name "hello_deployment" \
             --image "${{ env.IMAGE_NAME }}" \
             --apply
