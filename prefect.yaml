@@ -1,0 +1,8 @@
+flows:
+  hello_flow:
+    path: flows/hello_flow.py
+    entrypoint: hello_flow
+deployments:
+  hello_deployment:
+    flow: hello_flow
+    name: hello_deployment
