@@ -9,5 +9,5 @@ deployments:
   - name: hello_deployment
     flow: hello_flow
     entrypoint: flows/hello_flow.py:hello_flow
-    work_pool:
-      name: default-agent-pool
+    work_pool: 
+      name: my-work-pool

@@ -56,7 +56,7 @@ jobs:
           prefect-workspace: ${{ secrets.PREFECT_WORKSPACE }}
 
       - name: Start Prefect worker
-        run: prefect worker start --pool "default-work-pool" --run-once
+        run: prefect work-pool provision-infra my-work-pool
 
       # 8️⃣ Deploy Prefect flow (explicit entrypoint)
       - name: Deploy Prefect Flow
