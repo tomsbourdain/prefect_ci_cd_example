@@ -39,5 +39,4 @@ jobs:
       - name: Run Prefect Flow on GitHub Runner
         run: |
           cd $GITHUB_WORKSPACE
-          # Start a temporary worker that polls the pool and runs the flow
-          prefect worker start --pool "default-work-pool" --run-once
+          prefect deployment run 'hello_flow/deployment'
