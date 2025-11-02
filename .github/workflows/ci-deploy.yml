@@ -58,9 +58,6 @@ jobs:
       - name:  Checking Prefect Work Pools
         run: prefect work-pool ls
 
-      - name: Start Prefect worker
-        run: prefect worker start --pool default-work-pool --type docker
-
       # 8️⃣ Deploy Prefect flow (explicit entrypoint)
       - name: Deploy Prefect Flow
         uses: PrefectHQ/actions-prefect-deploy@v4

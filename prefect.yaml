@@ -10,4 +10,4 @@ deployments:
     flow: hello_flow
     entrypoint: flows/hello_flow.py:hello_flow
     work_pool:
-      name: default-agent-pool
+      name: default-work-pool
