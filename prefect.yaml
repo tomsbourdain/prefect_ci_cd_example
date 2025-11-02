@@ -6,6 +6,6 @@ flows:
     entrypoint: flows/hello_flow.py:hello_flow
 
 deployments:
-  hello_deployment:
+  - name: hello_deployment
     flow: hello_flow
-    name: hello_deployment
+    entrypoint: flows/hello_flow.py:hello_flow
