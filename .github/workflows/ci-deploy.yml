@@ -59,7 +59,5 @@ jobs:
       - name: Deploy Prefect Flow
         uses: PrefectHQ/actions-prefect-deploy@v4
         with:
-          deployment-names: hello_deployment
-          entrypoint: flows/hello_flow.py:hello_flow
-          requirements-file-paths: requirements.txt
-          image: ${{ env.IMAGE_NAME }}
+          deployment-file-path: prefect.yaml
+
